@@ -1,5 +1,10 @@
 const assertEqual = function(actual, expected) {
-  console.log(
+  if (Array.isArray(actual) && Array.isArray(expected)) {
+    actual = actual.join();
+    expected = expected.join();
+  };
+
+  return console.log(
     actual === expected ? `✨: ${actual} === ${expected}` :
       `🚨: ${actual} !== ${expected}`
   );
