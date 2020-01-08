@@ -28,4 +28,4 @@ const bestTVShowsByGenre = {
 };
 
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, 'Star Trek: Deep Space Nine'), 'sci_fi' );
+assertEqual(findKeyByValue(bestTVShowsByGenre, 'Star Trek: Deep Space Nine'), 'sci_fi');

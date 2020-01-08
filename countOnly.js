@@ -16,9 +16,8 @@ const countOnly = function (allItems, itemsToCount) {
   const results = {};
   console.log(itemsToCount);
   for (const item of allItems) {
-    console.log(item);
     if (itemsToCount[item]) {
-      results[item] ? console.log('increment!') + (results[item] ++) : console.log('found a match!') + (results[item] = 1);
+      results[item] ? results[item] ++ : results[item] = 1;
     }
   } // why does a const variable work but not a let?
   return results;
