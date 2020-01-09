@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (Array.isArray(actual) && Array.isArray(expected)) {
     actual = actual.join();
     expected = expected.join();
@@ -11,6 +11,19 @@ const assertEqual = function(actual, expected) {
 
   return actual === expected;
 };
+
+const eqObjects = function (actual, expected) {
+  if (actual.constructor === Object && expected.constructor === Object) {
+    console.log('🚨Objects Detected!🚨')
+    for (const key in actual) {
+      if (!assertEqual(actual[key], expected[key])) {
+        console.log("OBJECT MISMATCH");
+        return false;
+      }
+    }
+  }
+  return true;
+}
 
 const obj1 = {
   first: 'first',
@@ -36,17 +49,10 @@ const obj4 = {
   third: 'three'
 }
 
-const eqObjects = function(actual, expected) {
-  if (actual.constructor === Object && expected.constructor === Object) {
-    console.log('🚨Objects Detected!🚨')    
-    for (const key in actual) {
-       if (!assertEqual(actual[key], expected[key])) {return false}; 
-      }
-    }
-    return true;
-  }
+const obj5 = {
   
-
+}
 
 eqObjects(obj1, obj2);
 eqObjects(obj3, obj4);
+eqObjects(obj2, obj3);
