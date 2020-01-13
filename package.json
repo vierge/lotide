@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@vierge/lotide",
   "version": "1.0.0",
   "description": "lotide library created as part of lighthouse labs bootcamp",
   "main": "index.js",
