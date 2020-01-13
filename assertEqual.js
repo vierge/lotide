@@ -4,10 +4,8 @@ const assertEqual = function(actual, expected) {
     expected = expected.join();
   };
 
-  return console.log(
-    actual === expected ? `✨: ${actual} === ${expected}` :
-      `🚨: ${actual} !== ${expected}`
-  );
+  return actual === expected ? `✨: ${actual} === ${expected}` :
+      `🚨: ${actual} !== ${expected}`;
 };
 
 module.exports = assertEqual;
