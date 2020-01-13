@@ -1,8 +1,8 @@
 {
   "name": "lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertEqual.js",
+  "description": "lotide library created as part of lighthouse labs bootcamp",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/vierge/lotide.git"
   },
-  "author": "",
+  "author": "Mara Raine Gray @vierge",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vierge/lotide/issues"
